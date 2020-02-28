@@ -2,17 +2,35 @@ header {
     padding: 156px 0 100px;
   }
 
+  #main {
+    margin: auto;
+    
+  }
+
   #start {
     display: block;
     max-width: 300px;
     margin: auto;
+    background-color: #00ff00;
     
+  }
+
+  #sticky-footer {
+    flex-shrink: none;
+  }
+
+  #endGame {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    background-color: #696969;
   }
 
   #countdown {
     display: block;
     max-width: 300px;
     margin: auto;
+    background-color: #ffd700 ;
   }
 
   #score {
@@ -20,6 +38,8 @@ header {
     max-width: 300px;
     margin: auto;
   }
+
+  
 
   h1,h2 {
     text-align: center;
@@ -30,11 +50,15 @@ header {
     padding: 150px 0;
   }
 
+  body {
+    background-color: #00C7F2;
+  }
+
 .jumbotron {
-  background-color: #c351fe;
+  background-color: #00C7F2;
 }
 .answer-button {
-  background-color: #4bb5d9;
+  background-color: #dcedc1;
   display: block;
   font-size: 20px;
   margin: auto;
