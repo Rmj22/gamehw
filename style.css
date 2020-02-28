@@ -1,0 +1,41 @@
+header {
+    padding: 156px 0 100px;
+  }
+
+  #start {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+    
+  }
+
+  #countdown {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  #score {
+    display: block;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  h1,h2 {
+    text-align: center;
+    color: #000000;
+  }
+  
+  section {
+    padding: 150px 0;
+  }
+
+.jumbotron {
+  background-color: #c351fe;
+}
+.answer-button {
+  background-color: #4bb5d9;
+  display: block;
+  font-size: 20px;
+  margin: auto;
+}
