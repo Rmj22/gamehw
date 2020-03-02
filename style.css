@@ -38,7 +38,11 @@ header {
     max-width: 300px;
     margin: auto;
   }
-
+  
+  .display-3 {
+    display: block;
+    margin: auto;
+  }
   
 
   h1,h2 {

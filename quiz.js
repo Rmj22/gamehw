@@ -1,5 +1,6 @@
 $(document).ready(function(){
 
+    
     var canswer = 0
     var lanswer = 0
     
@@ -32,11 +33,52 @@ var questions = [
         answers: ["pound sign","html","period","none of the above"],
         correctanswer: "pound sign",
         wronganswer: ["html", "period", "none of the above"],
+    },
+    {
+        question: "what is git?",
+        answers: ["js library","css library","version control","none of the above"],
+        correctanswer: "version control",
+        wronganswer: ["js library", "css library", "none of the above"],
+    },
+    {
+        question: "what is the last page tag on a html file?",
+        answers: ["body","document.ready","html","head"],
+        correctanswer: "html",
+        wronganswer: ["body", "document.ready", "head"],
     }
+
 ]
+window.onload=function(){
+    document.getElementById("game_music").play();
+  }
+
 var qarea = $('#quizarea');
 var currentQuestion = 0;
-score = 0;
+var score = 0;
+var highs = []
+
+//This is my attempt to get the audio working with the buttons
+
+// let correct: new Audio({
+//     src: [".assets/mp3/correct-answer.mp3"],
+//     volume: 0.7,
+//  });
+
+//  let wrong: new Audio({
+//     src: [".assets/mp3/wrong-answer.mp3"],
+//     volume: 0.7,
+//  });
+
+
+// function buttons() {
+//     var selected = $(this).attr("data-name");
+//     if (selected === questions[currentQuestion].correctanswer );
+//     document.getElementById("qcorrect").play()
+// } else {
+
+// }
+
+
 
 function clickAnswer(){
     // alert ("correct",$(this).attr("data-name"))
@@ -90,10 +132,11 @@ function render() {
 $('#start').on('click', function() {
     alert("Instructions, answer as many questions correctly as you can in 60 seconds!")
 
-    var timeleft = 15;
+    var timeleft = 60;
     
 
-    var downloadTimer = setInterval(function function1(){
+    var downloadTimer = setInterval(function (){
+        
         document.getElementById("countdown").innerHTML = timeleft + "&nbsp"+"seconds remaining";
        
         timeleft -= 1;
@@ -113,6 +156,30 @@ $('#start').on('click', function() {
 render() 
 
 });
+
+// function startTimer() {
+//     $(".game-category").on("click", generateQuestion);
+//     var timerInterval = setInterval(function () {
+//        gameTime--;
+//        timerSpan.text("Timer: " + gameTime);
+
+//        // this is where we set the end of the game
+//        if (gameTime <= 0) {
+//           clearInterval(timerInterval)
+
+//           userScoreFinalDiv.text("Your score: " + userScore)
+
+//           let user = userName;
+//           let score = userScore;
+
+//           var currentDate = moment().format('L LT');
+//           let date = currentDate;
+
+//           // store scores into localStorage
+//           game = JSON.parse(localStorage.getItem("games") || "[]");
+//           game.push({ user: user, score: score, date: date });
+//           localStorage.setItem("games", JSON.stringify(game));
+
 
 $(document).on('click', ".answer-button", clickAnswer)
 
